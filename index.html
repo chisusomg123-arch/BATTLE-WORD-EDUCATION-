@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BATTLE GLOBAL EDUCATION: Camino a la Libertad</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- BARRA DE NAVEGACIÓN Y SELECCIÓN RÁPIDA -->
+  <header id="top-bar">
+    <div class="game-title">🌎 BATTLE GLOBAL EDUCATION (Pixel Edition)</div>
+    <div class="screen-selector-container">
+      <label for="screenSelect">Pantalla: </label>
+      <select id="screenSelect" class="screen-select" onchange="jumpToScreen(this.value)">
+        <option value="1">1. Inicio</option>
+        <option value="2">2. Modo de Juego</option>
+        <option value="3">3. Selección de Campaña</option>
+        <option value="4">4. Selección de Líder</option>
+        <option value="5">5. Introducción Histórica</option>
+        <option value="6">6. Objetivos de Campaña</option>
+        <option value="7">7. Mapa Estratégico (HoI4 Pixel)</option>
+        <option value="8">8. Gestión de Recursos</option>
+        <option value="9">9. Árbol de Ideas</option>
+        <option value="10">10. Pregunta / Quiz</option>
+        <option value="11">11. Recompensa Quiz</option>
+        <option value="12">12. Organización de Ejército</option>
+        <option value="13">13. Planificación Militar</option>
+        <option value="14">14. Batalla (Guerra Pixel 2D)</option>
+        <option value="15">15. Resultado de Batalla</option>
+        <option value="16">16. Diplomacia</option>
+        <option value="17">17. Evento Histórico</option>
+        <option value="18">18. Decisiones</option>
+        <option value="19">19. Logros y Progreso</option>
+        <option value="20">20. Enciclopedia</option>
+        <option value="21">21. Tienda / Mejoras</option>
+        <option value="22">22. Reporte Pedagógico</option>
+        <option value="23">23. Independencia Final</option>
+        <option value="24">24. Créditos</option>
+      </select>
+    </div>
+  </header>
+
+  <main id="screen-container">
+
+    <!-- 1. PANTALLA DE INICIO -->
+    <section id="screen-1" class="screen active">
+      <div class="pixel-panel">
+        <h1 class="pixel-title">BATTLE GLOBAL EDUCATION</h1>
+        <h3 class="pixel-subtitle">CAMINO A LA LIBERTAD</h3>
+        <p>Juego de estrategia y acción educativa en Pixel Art. Aprende la historia de América jugando.</p>
+        <div class="btn-group">
+          <button class="pixel-btn" onclick="nextScreen(2)">NUEVA CAMPAÑA</button>
+          <button class="pixel-btn" onclick="nextScreen(7)">CONTINUAR</button>
+          <button class="pixel-btn" onclick="nextScreen(20)">ENCICLOPEDIA</button>
+          <button class="pixel-btn" onclick="nextScreen(24)">CRÉDITOS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SELECCIÓN DE MODO -->
+    <section id="screen-2" class="screen">
+      <div class="pixel-panel">
+        <h2>MODO DE JUEGO</h2>
+        <div class="btn-group vertical">
+          <button class="pixel-btn" onclick="nextScreen(3)">🏰 CAMPAÑA HISTÓRICA</button>
+          <button class="pixel-btn" onclick="nextScreen(10)">📚 QUIZ EDUCATIVO</button>
+          <button class="pixel-btn" onclick="nextScreen(14)">⚔️ GUERRA PIXEL 2D</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SELECCIÓN DE CAMPAÑA -->
+    <section id="screen-3" class="screen">
+      <div class="pixel-panel">
+        <h2>SELECCIÓN DE REGIONAL</h2>
+        <div class="pixel-grid">
+          <div class="grid-card" onclick="nextScreen(4)"><b>NUEVA ESPAÑA</b><br><small>México / C.A.</small></div>
+          <div class="grid-card" onclick="nextScreen(4)"><b>VIRREINATO DEL PERÚ</b><br><small>Sudamérica Central</small></div>
+          <div class="grid-card" onclick="nextScreen(4)"><b>NUEVA GRANADA</b><br><small>Colombia / Venezuela</small></div>
+          <div class="grid-card" onclick="nextScreen(4)"><b>RÍO DE LA PLATA</b><br><small>Argentina / Uruguay</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SELECCIÓN DE LÍDER -->
+    <section id="screen-4" class="screen">
+      <div class="pixel-panel">
+        <h2>ELIGE A TU LÍDER</h2>
+        <div class="pixel-grid">
+          <div class="grid-card" onclick="nextScreen(5)"><b>SIMÓN BOLÍVAR</b><br><small>+15% Moral</small></div>
+          <div class="grid-card" onclick="nextScreen(5)"><b>JOSÉ DE SAN MARTÍN</b><br><small>+20% Ataque</small></div>
+          <div class="grid-card" onclick="nextScreen(5)"><b>MIGUEL HIDALGO</b><br><small>+10% Reclutamiento</small></div>
+          <div class="grid-card" onclick="nextScreen(5)"><b>JOSÉ ARTIGAS</b><br><small>+15% Velocidad</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. INTRODUCCIÓN HISTÓRICA -->
+    <section id="screen-5" class="screen">
+      <div class="pixel-panel">
+        <h2>SIGLO XIX: AMÉRICA LATINA</h2>
+        <p>Bajo el dominio colonial, las ideas de la Ilustración encienden el deseo de independencia en el continente.</p>
+        <button class="pixel-btn" onclick="nextScreen(6)">CONTINUAR</button>
+      </div>
+    </section>
+
+    <!-- 6. OBJETIVOS -->
+    <section id="screen-6" class="screen">
+      <div class="pixel-panel">
+        <h2>OBJETIVOS DE CAMPAÑA</h2>
+        <p>⭐ Libera 3 provincias estratégicas.<br>⭐ Gana batallas respondiendo correctamente el Quiz.<br>⭐ Proclama la Libertad Total.</p>
+        <button class="pixel-btn" onclick="nextScreen(7)">IR AL MAPA</button>
+      </div>
+    </section>
+
+    <!-- 7. MAPA ESTRATÉGICO estilo HoI4 -->
+    <section id="screen-7" class="screen">
+      <div class="pixel-panel">
+        <h2>MAPA TÁCTICO DE AMÉRICA</h2>
+        <div class="hud-pixel">
+          <span>💰 ORO: 300</span>
+          <span>🍞 VIVERES: 180</span>
+          <span>⚔️ TROPAS: 4,000</span>
+        </div>
+        <div class="pixel-grid">
+          <div class="grid-card highlight" onclick="nextScreen(10)">📍 PROVINCIA DEL NORTE (COMBATIR)</div>
+          <div class="grid-card" onclick="nextScreen(8)">🏛️ GESTIÓN ECONÓMICA</div>
+          <div class="grid-card" onclick="nextScreen(9)">💡 TECNOLOGÍA E IDEAS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. GESTIÓN DE RECURSOS -->
+    <section id="screen-8" class="screen">
+      <div class="pixel-panel">
+        <h2>ADMINISTRACIÓN DE RECURSOS</h2>
+        <p>Producción por Turno: +40 Oro | +25 Víveres | +10 Influencia</p>
+        <button class="pixel-btn" onclick="nextScreen(21)">TIENDA</button>
+        <button class="pixel-btn" onclick="nextScreen(7)">VOLVER AL MAPA</button>
+      </div>
+    </section>
+
+    <!-- 9. ÁRBOLES DE IDEAS -->
+    <section id="screen-9" class="screen">
+      <div class="pixel-panel">
+        <h2>ÁRBOL DE INVESTIGACIÓN</h2>
+        <button class="pixel-btn" onclick="nextScreen(7)">📜 IMPRENTA PATRIA (+10% Influencia)</button>
+        <button class="pixel-btn" onclick="nextScreen(7)">⚔️ DERECHOS CIUDADANOS (+15% Moral)</button>
+      </div>
+    </section>
+
+    <!-- 10. PREGUNTA EDUCATIVA (QUIZ) -->
+    <section id="screen-10" class="screen">
+      <div class="pixel-panel">
+        <h2>DESAFÍO HISTÓRICO (QUIZ)</h2>
+        <p><b>¿Qué documento inspiró fuertemente los movimientos independentistas en América?</b></p>
+        <div class="btn-group vertical">
+          <button class="pixel-btn" onclick="answerQuiz(true)">A) Declaración de los Derechos del Hombre</button>
+          <button class="pixel-btn" onclick="answerQuiz(false)">B) La Ilustración Feudal</button>
+          <button class="pixel-btn" onclick="answerQuiz(false)">C) Código de Hammurabi</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. RECOMPENSA QUIZ -->
+    <section id="screen-11" class="screen">
+      <div class="pixel-panel">
+        <h2 style="color: var(--earth-land);">¡RESPUESTA CORRECTA!</h2>
+        <p>+100 Oro | +50 Víveres | +15% Moral en Combate</p>
+        <button class="pixel-btn" onclick="nextScreen(12)">ORGANIZAR EJÉRCITO</button>
+      </div>
+    </section>
+
+    <!-- 12. EJÉRCITO -->
+    <section id="screen-12" class="screen">
+      <div class="pixel-panel">
+        <h2>UNIDADES MILITARES</h2>
+        <p>Infantería Pixel: 2,500 | Caballería: 1,000 | Artillería: 400</p>
+        <button class="pixel-btn" onclick="nextScreen(13)">PLANIFICAR ASALTO</button>
+      </div>
+    </section>
+
+    <!-- 13. PLANIFICACIÓN -->
+    <section id="screen-13" class="screen">
+      <div class="pixel-panel">
+        <h2>ESTRATEGIA DE AVANCE</h2>
+        <p>Alineando regimientos en la frontera.</p>
+        <button class="pixel-btn" onclick="nextScreen(14)">¡AL COMBATE!</button>
+      </div>
+    </section>
+
+    <!-- 14. GUERRA 2D PIXEL ART (OPTMIZADO A 60 FPS) -->
+    <section id="screen-14" class="screen">
+      <div class="pixel-panel">
+        <h2>BATALLA EN TIEMPO REAL (PIXEL WAR 2D)</h2>
+        <p>Mueve con <b>WASD / Flechas</b> y dispara con <b>ESPACIO</b></p>
+        
+        <canvas id="game-canvas" width="640" height="320"></canvas>
+
+        <div class="btn-group">
+          <button class="pixel-btn" onclick="nextScreen(15)">FINALIZAR BATALLA</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15. RESULTADO BATALLA -->
+    <section id="screen-15" class="screen">
+      <div class="pixel-panel">
+        <h1 style="color: var(--earth-sun);">¡VICTORIA PATRIOTA!</h1>
+        <p>Provincia liberada con éxito.</p>
+        <button class="pixel-btn" onclick="nextScreen(16)">DIPLOMACIA</button>
+      </div>
+    </section>
+
+    <!-- 16. DIPLOMACIA -->
+    <section id="screen-16" class="screen">
+      <div class="pixel-panel">
+        <h2>DIPLOMACIA Y ALIANZAS</h2>
+        <p>Relaciones: Gran Bretaña (Aliado) | España (Enemigo)</p>
+        <button class="pixel-btn" onclick="nextScreen(17)">VER EVENTO</button>
+      </div>
+    </section>
+
+    <!-- 17. EVENTO HISTÓRICO -->
+    <section id="screen-17" class="screen">
+      <div class="pixel-panel">
+        <h2>EVENTO: CONGRESO DE ANGOSTURA</h2>
+        <p>Debate legislativo sobre la unión de las provincias independientes.</p>
+        <button class="pixel-btn" onclick="nextScreen(18)">DECIDIR</button>
+      </div>
+    </section>
+
+    <!-- 18. DECISIONES -->
+    <section id="screen-18" class="screen">
+      <div class="pixel-panel">
+        <h2>DECISIÓN POLÍTICA</h2>
+        <button class="pixel-btn" onclick="nextScreen(19)">PROMOVER EDUCACIÓN PÚBLICA</button>
+        <button class="pixel-btn" onclick="nextScreen(19)">FORTALECER EJÉRCITO PATRIO</button>
+      </div>
+    </section>
+
+    <!-- 19. LOGROS -->
+    <section id="screen-19" class="screen">
+      <div class="pixel-panel">
+        <h2>LOGROS EDUCATIVOS</h2>
+        <p>🏆 Primera Victoria Táctica | 📜 Historiador Destacado</p>
+        <button class="pixel-btn" onclick="nextScreen(20)">ENCICLOPEDIA</button>
+      </div>
+    </section>
+
+    <!-- 20. ENCICLOPEDIA -->
+    <section id="screen-20" class="screen">
+      <div class="pixel-panel">
+        <h2>ENCICLOPEDIA HISTÓRICA</h2>
+        <p>Documentos, biografías de próceres y cronología militar.</p>
+        <button class="pixel-btn" onclick="nextScreen(21)">TIENDA</button>
+      </div>
+    </section>
+
+    <!-- 21. TIENDA -->
+    <section id="screen-21" class="screen">
+      <div class="pixel-panel">
+        <h2>MEJORAS Y EQUIPAMIENTO</h2>
+        <button class="pixel-btn" onclick="nextScreen(22)">MEJORAR UNIFORMES PATRIOS (100 Oro)</button>
+      </div>
+    </section>
+
+    <!-- 22. REPORTE PEDAGÓGICO -->
+    <section id="screen-22" class="screen">
+      <div class="pixel-panel">
+        <h2>REPORTE DOCENTE</h2>
+        <p>Precisión en Quiz: <b>100% Correcto</b> | Rendimiento Táctico: <b>Alto</b></p>
+        <button class="pixel-btn" onclick="nextScreen(23)">FINALIZAR CAMPAÑA</button>
+      </div>
+    </section>
+
+    <!-- 23. INDEPENDENCIA -->
+    <section id="screen-23" class="screen">
+      <div class="pixel-panel">
+        <h1 style="color: var(--earth-sun);">¡INDEPENDENCIA ALCANZADA!</h1>
+        <p>América es libre gracias a tu liderazgo e historia.</p>
+        <button class="pixel-btn" onclick="nextScreen(24)">CRÉDITOS</button>
+      </div>
+    </section>
+
+    <!-- 24. CRÉDITOS -->
+    <section id="screen-24" class="screen">
+      <div class="pixel-panel">
+        <h2>CRÉDITOS</h2>
+        <p><b>Battle Global Education: Camino a la Libertad</b><br>Diseñado para educación secundaria.</p>
+        <button class="pixel-btn" onclick="nextScreen(1)">MENÚ PRINCIPAL</button>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
